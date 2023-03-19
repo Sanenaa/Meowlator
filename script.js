@@ -47,9 +47,7 @@ function handleMath(symbol){
     if(buffer === '0'){
         return;
     }
-
-    const intBuffer = parseInt(buffer);
-
+    
     if(runningTotal === 0){
         runningTotal = intBuffer;
     }else{
@@ -58,6 +56,8 @@ function handleMath(symbol){
     previousOperator = symbol;
     buffer = '0';
 }
+
+const intBuffer = parseInt(buffer);
 
 function flushOperation(intButter){
     if(previousOperator === '+'){
